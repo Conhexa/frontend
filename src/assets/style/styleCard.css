@@ -1,0 +1,39 @@
+img{
+    width: 200px;
+    height: 150px;
+    margin-bottom: 10px;
+}
+
+p{
+    color: #656565;
+}
+
+.link:hover{
+    text-decoration: none;
+}
+
+#category{
+    margin-top: -190px;
+    background: #3356a6;
+    color: #f5f5f5;
+    width: 50px;
+    margin-left: auto;
+}
+
+#title{
+    margin-top: 160px;
+    color: #3356A6;
+    font-family: 'Staatliches';
+}
+
+#description{
+    font-size: 15px;
+    text-align: left;
+    margin-top: -8px;
+}
+
+#author{
+    text-align: right;
+    margin: 280px 0px -300px 0px;
+    font-size: 12px;
+}

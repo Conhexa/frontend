@@ -1,0 +1,14 @@
+.content{
+    text-align: justify;
+    color: black;
+}
+
+.picture{
+    width: 400px;
+}
+
+.author {
+    font-style: italic;
+    font-size: 14px;
+    text-align: right;
+}

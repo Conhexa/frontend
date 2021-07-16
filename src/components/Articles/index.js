@@ -49,7 +49,6 @@ const Articles = ({ articles }) => {
           {gridArticles.reverse().map((article, i) => {
             return (
               <div className={classes.root}>
-                
                   <Grid item xs={10}>
                     <Paper className={classes.paper}> 
                       <Card article={article} key={`article__${article.slug}`} />

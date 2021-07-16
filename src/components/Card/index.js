@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Moment from "react-moment";
 
 import '../../assets/style/styleCard.css';
 
@@ -19,13 +20,14 @@ const Card = ({ article }) => {
             src={imageUrl}
             alt={article.image.url}
             height="100"
+            className="articleImg"
           />
         </div>
         <p id="category" >
           {article.category.name}
         </p>
         <p id="author">
-        Écrit par {article.author.name}
+        Écrit par {article.author.name} le <Moment format="Do MMMM YYYY">{article.published_at}</Moment>
         </p>
         <div>
           <p id="title" >

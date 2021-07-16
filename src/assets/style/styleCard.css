@@ -1,4 +1,4 @@
-img{
+.articleImg{
     width: 200px;
     height: 150px;
     margin-bottom: 10px;
@@ -34,6 +34,6 @@ p{
 
 #author{
     text-align: right;
-    margin: 280px 0px -300px 0px;
+    margin: 295px 0px -315px 0px;
     font-size: 12px;
 }

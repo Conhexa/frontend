@@ -26,13 +26,13 @@ const Article = () => {
                 data-srcset={imageUrl}
                 data-uk-img
               >
-                <h1>{articles[0].title}</h1>
               </div>
               <div className="uk-section">
                 <div className="uk-container uk-container-small">
+                  <h1>{articles[0].title}</h1>
                   <ReactMarkdown className="content">{articles[0].content}</ReactMarkdown>
                   <p className="author">
-                    Ecrit par : {articles[0].author.name} le <Moment format="MMM Do YYYY">{articles[0].published_at}</Moment>
+                    Ecrit par : {articles[0].author.name} le <Moment format="Do MMMM YYYY">{articles[0].published_at}</Moment>
                   </p>
                 </div>
               </div>

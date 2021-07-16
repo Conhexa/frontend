@@ -26,11 +26,25 @@ const useStyles = makeStyles((theme) => ({
 
 const Articles = ({ articles }) => {
   const classes = useStyles();
-  const gridArticles = articles.slice(0, articles.length);
+  const gridArticles = articles.slice(0, articles.length-1);
+  const lastArticles = articles.slice(articles.length-1, articles.length);
   return (
     <div>
       <div>
         <div>
+        <Grid container spacing={10}>
+          {lastArticles.reverse().map((article, i) => {
+            return (
+              <div className={classes.root}>
+                  <Grid item xs={10}>
+                    <Paper className={classes.paper}> 
+                      <Card article={article} key={`article__${article.slug}`} />
+                    </Paper>
+                  </Grid>
+              </div>
+            )
+          })}
+        </Grid>
         <Grid container spacing={1}>
           {gridArticles.reverse().map((article, i) => {
             return (

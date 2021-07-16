@@ -13,7 +13,7 @@ const Nav = () => {
             <div>
               <nav className="menuNav" data-uk-navbar>
                 <div className="uk-navbar-left">
-                  <ul className="uk-navbar-nav">
+                  <ul className="uk-navbar-nav menuNav">
                     <li>
                       <Link to="/">Conhexa</Link>
                     </li>

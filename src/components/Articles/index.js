@@ -41,7 +41,6 @@ const Articles = ({ articles }) => {
                       <Card article={article} key={`article__${article.slug}`} />
                     </Paper>
                   </Grid>
-                
               </div>
             )
           })}

@@ -25,7 +25,7 @@ const Card = ({ article }) => {
           {article.category.name}
         </p>
         <p id="author">
-          Écrit par {article.author.name}
+        Écrit par {article.author.name}
         </p>
         <div>
           <p id="title" >

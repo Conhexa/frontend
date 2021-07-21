@@ -1,5 +1,5 @@
 import React from "react";
-import Card from "../Card";
+import Card from "../../components/Card";
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
 
 const Articles = ({ articles }) => {
   const classes = useStyles();
-  const gridArticles = articles.slice(0, articles.length);
+  const gridArticles = articles.slice(articles.length-3, articles.length);
   return (
     <div>
       <div>

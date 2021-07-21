@@ -15,6 +15,9 @@ const Nav = () => {
                 <div className="uk-navbar-left">
                   <ul className="uk-navbar-nav menuNav">
                     <li>
+                      <Link to="/articles">Blog</Link>
+                    </li>
+                    <li>
                       <Link to="/">Conhexa</Link>
                     </li>
                   </ul>

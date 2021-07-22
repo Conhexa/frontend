@@ -1,22 +1,14 @@
 import React from "react";
-import Query from "../Query";
 import { Link } from "react-router-dom";
-import CATEGORIES_QUERY from "../../queries/category/categories";
 import '../../assets/style/styleNav.css'
 
 const Nav = () => {
   return (
     <div>
-      <Query query={CATEGORIES_QUERY} id={null}>
-        {({ data: { categories } }) => {
-          return (
             <div>
               <nav className="menuNav" data-uk-navbar>
                 <div className="uk-navbar-left">
                   <ul className="uk-navbar-nav menuNav">
-                    <li>
-                      <Link to="/articles">Blog</Link>
-                    </li>
                     <li>
                       <Link to="/">Conhexa</Link>
                     </li>
@@ -24,25 +16,28 @@ const Nav = () => {
                 </div>
                 <div className="uk-navbar-right">
                   <ul className="uk-navbar-nav">
-                    {categories.map((category, i) => {
-                      return (
-                        <li key={category.slug}>
-                          <Link
-                            to={`/category/${category.slug}`}
-                            className="uk-link-reset"
-                          >
-                            {category.name}
-                          </Link>
-                        </li>
-                      );
-                    })}
+                    <li>
+                      <Link to="/">Conhexa Academy</Link>
+                    </li>
+                    <li>
+                      <Link to="/">Planning</Link>
+                    </li>
+                    <li>
+                      <Link to="/blog">Blog</Link>
+                    </li>
+                    <li>
+                      <Link to="/">Information</Link>
+                    </li>
+                    <li>
+                      <Link to="/">Gallerie</Link>
+                    </li>
+                    <li>
+                      <Link to="/">Contact</Link>
+                    </li>
                   </ul>
                 </div>
               </nav>
             </div>
-          );
-        }}
-      </Query>
     </div>
   );
 };

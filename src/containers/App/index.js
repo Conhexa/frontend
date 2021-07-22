@@ -1,6 +1,5 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
-import Nav from "../../components/Nav";
 import Articles from "../Articles";
 import Article from "../Article";
 import Category from "../Category";
@@ -10,7 +9,6 @@ import Dashboard from "../../components/Dashboard/Dashboard.js";
 function App() {
   return (
     <div className="App">
-      <Nav />
       <Switch>
         <Route path="/" component={Main} exact />
         <Route path="/blog" component={Articles} exact />

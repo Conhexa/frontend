@@ -6,6 +6,7 @@ import ARTICLES_QUERY from "../../queries/article/articles";
 import Button from '@material-ui/core/Button';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
+import Nav from "../../components/Nav";
 
 import { Link } from "react-router-dom";
 import CATEGORIES_QUERY from "../../queries/category/categories";
@@ -25,6 +26,7 @@ const Home = () => {
 
   return (
     <div>
+      <Nav />
       <div className="uk-section">
         <div className="uk-container uk-container-large">
           <h1>Blog</h1>

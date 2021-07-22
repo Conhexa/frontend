@@ -4,13 +4,14 @@ import '../../assets/style/styleMain.css';
 import ARTICLES_QUERY from "../../queries/article/articles";
 
 import Articles from "../../components/Articles"; */
-
+import Nav from "../../components/Nav";
 import SlideShow from "../SlideShow/Slide";
 
 
 const MainPage = () => {
     return (
         <div>
+            <Nav />
             <SlideShow />
             <div className="content">
                 <h1 className="actualityTitle">Les actualités</h1>

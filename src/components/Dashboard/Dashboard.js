@@ -171,7 +171,7 @@ export default function Dashboard() {
         open={open}
       >
         <div className={classes.toolbarIcon}>
-        <Button color="primary">Allez sur le site</Button>
+        <Button color="primary" href="/">Allez sur le site</Button>
           <IconButton onClick={handleDrawerClose}>
             <ChevronLeftIcon />
           </IconButton>

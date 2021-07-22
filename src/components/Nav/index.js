@@ -12,6 +12,9 @@ const Nav = () => {
                     <li>
                       <Link to="/">Conhexa</Link>
                     </li>
+                    <li>
+                      <Link to="/admin">Gérer le site</Link>
+                    </li>
                   </ul>
                 </div>
                 <div className="uk-navbar-right">

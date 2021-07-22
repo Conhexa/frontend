@@ -7,6 +7,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import Collapse from '@material-ui/core/Collapse';
 import ExpandLess from '@material-ui/icons/ExpandLess';
 import ExpandMore from '@material-ui/icons/ExpandMore';
+import { Link } from 'react-router-dom';
 
 /* Import des Icons */
 import ListItemIcon from '@material-ui/core/ListItemIcon';
@@ -76,35 +77,12 @@ export default function NestedList() {
       </ListItemIcon>
       <ListItemText primary="Dashboard"/>
     </ListItem>
-    <ListItem button onClick={handleClickBlog} className={classes.buttonDecoration}>
+    <ListItem button component="a" href="http://localhost:1337/admin" onClick={handleClickBlog} className={classes.buttonDecoration} >
       <ListItemIcon>
         <MenuBookIcon />
       </ListItemIcon>
-      <ListItemText primary="Blog"/>
-      {blogOpen ? <ExpandLess /> : <ExpandMore />}
+      <ListItemText primary="Gérer le blog"/>
     </ListItem>
-    <Collapse in={blogOpen} timeout="auto" unmountOnExit>
-        <List component="div" disablePadding>
-          <ListItem button className={classes.nested}>
-            <ListItemIcon>
-              <AddIcon />
-            </ListItemIcon>
-            <ListItemText primary="Ajouter une news" />
-          </ListItem>
-          <ListItem button className={classes.nested}>
-            <ListItemIcon>
-              <EditIcon />
-            </ListItemIcon>
-            <ListItemText primary="Editer une news" />
-          </ListItem>
-          <ListItem button className={classes.nested}>
-            <ListItemIcon>
-              <DeleteIcon />
-            </ListItemIcon>
-            <ListItemText primary="Supprimer une news" />
-          </ListItem>
-        </List>
-      </Collapse>
     <ListItem button onClick={handleClickUser} className={classes.buttonDecoration}>
       <ListItemIcon>
         <PeopleIcon />

@@ -28,8 +28,13 @@ const Nav = () => {
                     <li>
                       <Link to="/blog">Blog</Link>
                     </li>
-                    <li>
-                      <Link to="/">Information</Link>
+                    <li className="dropdown">
+                      <Link to="/"className="dropbtn">Information</Link>
+                        <div className="dropdownContent">
+                          <Link to="/" className="dropdownItem">Page CE</Link>
+                          <Link to="/" className="dropdownItem">FaQ</Link>
+                          <Link to="/" className="dropdownItem">L'équipe</Link>
+                        </div>
                     </li>
                     <li>
                       <Link to="/">Gallerie</Link>

@@ -15,3 +15,45 @@
 .menuNav li a:focus{
     color: #f5f5f5;
 }
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+  }
+
+  .menuNav li a:active{
+      color:#1c9447;
+  }
+  
+  .dropdown .dropbtn {
+    border: none;
+    outline: none;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+  .dropdownContent {
+    display: none;
+    position: absolute;
+    background-color: #3356a6;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdownContent .dropdownItem {
+    float: none;
+    color: #f5f5f5;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdownContent .dropdownItem:hover {
+    background-color: #ddd;
+  }
+  
+  .dropdown:hover .dropdownContent {
+    display: block;
+  }

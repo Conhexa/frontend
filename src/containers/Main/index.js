@@ -6,7 +6,7 @@ import ARTICLES_QUERY from "../../queries/article/articles";
 import Articles from "../../components/Articles"; */
 import Nav from "../../components/Nav";
 import SlideShow from "../SlideShow/Slide";
-
+import Footer from "../../components/Footer"
 
 const MainPage = () => {
     return (
@@ -20,6 +20,7 @@ const MainPage = () => {
                     }}
                 </Query> */}
             </div>
+            <Footer />
         </div>
     );
 }

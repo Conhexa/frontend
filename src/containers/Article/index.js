@@ -6,6 +6,7 @@ import Moment from "react-moment";
 import ARTICLE_QUERY from "../../queries/article/article";
 import Nav from "../../components/Nav";
 import '../../assets/style/pageArticle.css';
+import Footer from "../../components/Footer";
 
 const Article = () => {
   let { id } = useParams();
@@ -43,6 +44,7 @@ const Article = () => {
         }
       }}
     </Query>
+    <Footer />
     </div>
   );
 };

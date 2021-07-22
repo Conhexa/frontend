@@ -12,6 +12,7 @@ import { Link } from "react-router-dom";
 import CATEGORIES_QUERY from "../../queries/category/categories";
 
 import '../../assets/style/styleBlog.css';
+import Footer from "../../components/Footer";
 
 const Home = () => {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -67,6 +68,7 @@ const Home = () => {
           </Query>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

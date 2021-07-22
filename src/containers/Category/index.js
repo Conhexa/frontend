@@ -10,6 +10,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 
 import { Link } from "react-router-dom";
 import CATEGORIES_QUERY from "../../queries/category/categories";
+import Footer from "../../components/Footer";
 
 
 const Category = () => {
@@ -73,6 +74,7 @@ const Category = () => {
         }
       }}
     </Query>
+    <Footer />
     </div>
   );
 };

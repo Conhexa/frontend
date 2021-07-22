@@ -4,13 +4,14 @@ import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 
+
 const useStyles = makeStyles((theme) => ({
   root: {
     width: 300,
     height: 450,
     marginTop: 'auto',
-    marginRight: 'auto',
     marginLeft: 'auto',
+    marginRight: 'auto',
   },
   paper: {
     padding: theme.spacing(2),
@@ -28,10 +29,8 @@ const Articles = ({ articles }) => {
   const classes = useStyles();
   const gridArticles = articles.slice(0, articles.length);
   return (
-    <div>
-      <div>
-        <div>
-        <Grid container spacing={1}>
+        <div className="content">
+        <Grid container spacing={1} xs={11}>
           {gridArticles.reverse().map((article, i) => {
             return (
               <div className={classes.root}>
@@ -45,8 +44,6 @@ const Articles = ({ articles }) => {
           })}
         </Grid>
         </div>
-      </div>
-    </div>
   );
 };
 export default Articles;

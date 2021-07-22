@@ -45,9 +45,9 @@ const Footer = () => {
       </div>
       <div className="copyright">
             <p>Copyright © 
-                {' '}
+                {' ' + new Date().getFullYear() + ' | Designed by '}
                 <a href="https://www.conhexa.com/">
-                    Conhexa {' ' + new Date().getFullYear() + '.'}
+                    Conhexa 
                 </a>
             </p> 
         </div>

@@ -5,6 +5,7 @@ import Article from "../Article";
 import Category from "../Category";
 import Main from "../Main";
 import Dashboard from "../../components/Dashboard/Dashboard.js";
+import Contact from "../Contact";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/article/:id" component={Article} exact />
         <Route path="/category/:id" component={Category} exact />
         <Route path="/admin" component={Dashboard} exact />
+        <Route path="/contact" component={Contact} exact />
       </Switch>
     </div>
   );

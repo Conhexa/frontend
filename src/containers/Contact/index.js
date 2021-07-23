@@ -34,48 +34,27 @@ const Contact = () =>{
                         </div>
                     </div>
                     <div className="formContact">
-                        <form className={"formGrid"}>
-                            <div className="lastName">
-                                <label>
-                                    Nom
-                                </label>
-                                <input/>
-                            </div>
+                        <form>
+                            <label for="fname">Prénom</label>
+                            <input type="text" id="fname" name="firstname" placeholder="Votre prénom.."/>
 
-                            <div className="firstName">
-                                <label>
-                                    Prénom
-                                </label>
-                                <input/>
-                            </div>
-                                    
-                            <div className="phone">
-                                <label>
-                                    Téléphone
-                                </label>
-                                <input/>
-                            </div>
-
-                            <div className="object">
-                                <label>
-                                    Objet
-                                </label>
-                                <input/>
-                            </div>
-                    
-                            <div className="mail">
-                                <label>
-                                    Adresse e-mail
-                                </label>
-                                <input/>
-                            </div>
+                            <label for="lname">Nom</label>
+                            <input type="text" id="lname" name="lastname" placeholder="Votre nom.."/>
                             
-                            <div className="message">
-                                <label>
-                                    Votre message
-                                </label>
-                                <textarea/>
-                            </div>     
+                            <label for="lname">Adresse e-mail</label>
+                            <input type="text" id="lname" name="lastname" placeholder="Votre adresse mail.."/>
+
+                            <label for="country">Objet</label>
+                            <select id="country" name="country">
+                                <option value="australia">Theme 1</option>
+                                <option value="canada">Theme 2</option>
+                                <option value="usa">Theme 3</option>
+                            </select>
+
+                            <label for="subject">Sujet</label>
+                            <textarea id="subject" name="subject" placeholder="Votre message.." />
+
+                            <input type="submit" value="Envoyer"/>
                         </form>
                     </div>
                 </div>

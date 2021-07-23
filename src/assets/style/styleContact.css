@@ -1,4 +1,115 @@
 .content{
-    min-height: calc(100vh - 70px);
-    
+    min-height: calc(100vh - 425px);
+    margin-left: 10%;
+    margin-right: 10%;
 }
+
+.contactTitle{
+    color: #1c9447;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.contactUser{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.line{
+    border-right: 2px solid #3356a6;
+}
+
+.contactUser h2{
+    font-size: 20px;
+    color: #3356a6;
+    font-weight: bold;
+}
+
+.poste{
+    font-weight: bold;
+    font-style: italic;
+}
+
+.descPoste{
+    font-style: italic;
+    margin-top: -20px;
+}
+
+.userContact{
+    font-weight: bold;
+}
+
+.infoUserContact{
+    font-style: italic;
+    margin-top: -20px;
+}
+
+.formContact{
+    background: pink;
+    text-align: center;
+}
+
+.formGrid{
+    flex-grow: 1;
+    margin: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+label{
+    display: block;
+    text-align: left;
+}
+
+.lastName{
+    grid-column: span 1;
+}
+
+.lastName input{
+    width: 80%;
+}
+
+.firstName{
+    grid-column: span 1;
+}
+
+.firstName input{
+    width: 80%;
+}
+
+.phone{
+    grid-column: span 1;
+}
+
+.phone input{
+    width: 80%;
+}
+
+.object{
+    grid-column: span 2;
+}
+
+.object input{
+    width: 90%;
+}
+
+.mail{
+    grid-column: span 1;
+}
+
+.mail input{
+    width: 80%;
+}
+
+.message{
+    grid-column: span 3;
+}
+
+.message textarea{
+    width: 93.5%;
+    height: 150px;
+}
+

@@ -15,31 +15,31 @@ const Footer = () => {
           </div>
           <div className="column">
             <p className="heading">Blog</p>
-            <Link to="/" className="footerLink">News</Link>
-            <Link to="/" className="footerLink">Important</Link>
-            <Link to="/" className="footerLink">Information RH</Link>
+            <Link to="/category/news" className="footerLink">News</Link>
+            <Link to="/category/important" className="footerLink">Important</Link>
+            <Link to="/category/information-rh" className="footerLink">Information RH</Link>
           </div>
           <div className="column">
             <p className="heading">Service RH</p>
-            <Link to="/" className="footerLink">Fanny Adam</Link>
-            <Link to="/" className="footerLink">Margaux Tacquez</Link>
+            <Link to="/manager" className="footerLink">Fanny Adam</Link>
+            <Link to="/gestionnaire" className="footerLink">Margaux Tacquez</Link>
           </div>
           <div className="column">
             <p className="heading">Nos réseaux</p>
-            <Link to="/" className="footerLink">
+            <a href="https://fr.linkedin.com/company/conhexa" className="footerLink">
               <i className="fab fa-facebook-f">
                 <span style={{ marginLeft: "10px" }}>
                   LinkedIn
                 </span>
               </i>
-            </Link>
-            <Link to="/" className="footerLink">
+            </a>
+            <a href="https://www.youtube.com/channel/UCBsNkuWbJJ5RoxkQFWvOmWQ" className="footerLink">
               <i className="fab fa-youtube">
                 <span style={{ marginLeft: "10px" }}>
                   Youtube
                 </span>
               </i>
-            </Link>
+            </a>
           </div>
         </div>
       </div>

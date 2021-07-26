@@ -2,36 +2,30 @@ import React from 'react';
 import Nav from '../../components/Nav';
 import Footer from '../../components/Footer';
 
-import '../../assets/style/styleContact.css'
+import '../../assets/style/styleRhContact.css'
 
-const Contact = () =>{
+const Manager = () =>{
 
     return (
         <div>
             <Nav />
                 <div className='content'>
-                    <h1> 
-                        Contacter directement le service RH
+                    <h1 className="contactTitle"> 
+                        Vous souhaitez contacter Margaux Tacquez ?
                     </h1>
-                    <div className="contactUser">
-                        <div className="line">
-                            <h2>Fanny Adam</h2>
-                            <p className="poste">Talent Manager</p>
-                            <p className="descPoste">(Recrutement / Formation)</p>
-                            <p className="userContact">Téléphone:</p>
-                            <p className="infoUserContact">03.28.28.93.76</p>
-                            <p className="userContact">Adresse e-mail:</p>
-                            <p className="infoUserContact">f.adam@conhexa.com</p>
-                        </div>
-                        <div>
-                            <h2>Margaux Tacquez</h2>
-                            <p className="poste">Gestionnaire RH</p>
-                            <p className="descPoste">(Gestion administrative et Paie)</p>
-                            <p className="userContact">Téléphone:</p>
-                            <p className="infoUserContact">03.28.43.86.92</p>
-                            <p className="userContact">Adresse e-mail:</p>
-                            <p className="infoUserContact">m.tacquez@conhexa.com</p>
-                        </div>
+                    <div className="contactRhUser">
+                            <div>
+                            <p className="posteRh">Gestionnaire RH</p>
+                            <p className="descPosteRh">(Gestion administrative et Paie)</p>
+                            </div>
+                            <div>
+                            <p className="userContactRh">Téléphone:</p>
+                            <p className="infoUserContactRh">03.28.43.86.92</p>
+                            </div>
+                            <div>
+                            <p className="userContactRh">Adresse e-mail:</p>
+                            <p className="infoUserContactRh">m.tacquez@conhexa.com</p>
+                            </div>
                     </div>
                     <div className="formContact">
                         <form>
@@ -63,4 +57,4 @@ const Contact = () =>{
     );
 };
 
-export default Contact;
+export default Manager;

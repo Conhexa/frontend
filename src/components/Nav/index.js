@@ -31,7 +31,7 @@ const Nav = () => {
                     <li className="dropdown">
                       <Link to="/"className="dropbtn">Information</Link>
                         <div className="dropdownContent">
-                          <Link to="/" className="dropdownItem">Page CE</Link>
+                          <Link to="/workcouncil" className="dropdownItem">Page CE</Link>
                           <Link to="/" className="dropdownItem">FaQ</Link>
                           <Link to="/" className="dropdownItem">L'équipe</Link>
                         </div>

@@ -30,13 +30,13 @@ const Manager = () =>{
                     <div className="formContactRh">
                         <form>
                             <label for="fname">Prénom</label>
-                            <input type="text" id="fname" name="firstname" placeholder="Votre prénom.." required/>
+                            <input className="inputContact" type="text" id="fname" name="firstname" placeholder="Votre prénom.." required/>
 
                             <label for="lname">Nom</label>
-                            <input type="text" id="lname" name="lastname" placeholder="Votre nom.." required/>
+                            <input className="inputContact" type="text" id="lname" name="lastname" placeholder="Votre nom.." required/>
                             
                             <label for="lname">Adresse e-mail</label>
-                            <input type="text" id="lname" name="lastname" placeholder="Votre adresse mail.." pattern="[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.+[a-zA-Z.]{2,15}" required/>
+                            <input className="inputContact" type="text" id="mail" name="mail" placeholder="Votre adresse mail.." pattern="[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.+[a-zA-Z.]{2,15}" required/>
 
                             <label for="country">Objet</label>
                             <select id="country" name="country">

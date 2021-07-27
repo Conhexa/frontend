@@ -12,6 +12,7 @@ import Gestionnaire from "../Contact/Gestionnaire";
 import Gallery from "../Gallery";
 
 import '../../assets/style/styleApp.css';
+import WorkCouncil from "../WorkCouncil";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route path="/manager" component={Manager} exact />
         <Route path="/gestionnaire" component={Gestionnaire} exact />
         <Route path="/gallery" component={Gallery} exact />
+        <Route path="/workcouncil" component={WorkCouncil} exact />
       </Switch>
     </div>
   );

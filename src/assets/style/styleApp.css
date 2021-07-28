@@ -3,3 +3,12 @@
     text-align: center;
     margin-top: 20px;
 }
+
+.content{
+    min-height: calc(100vh - 425px);
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: justify;
+    color: black;
+    margin-bottom: 50px;
+}

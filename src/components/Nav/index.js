@@ -33,7 +33,7 @@ const Nav = () => {
                         <div className="dropdownContent">
                           <Link to="/workcouncil" className="dropdownItem">Page CE</Link>
                           <Link to="/" className="dropdownItem">FaQ</Link>
-                          <Link to="/" className="dropdownItem">L'équipe</Link>
+                          <Link to="/team" className="dropdownItem">L'équipe</Link>
                         </div>
                     </li>
                     <li>

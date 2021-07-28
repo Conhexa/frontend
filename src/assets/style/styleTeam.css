@@ -1,0 +1,61 @@
+.teamGrid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+}
+
+.teamCard img{
+    width: 50%;
+    /* border-top-left-radius: 15px;
+    border-top-right-radius: 15px; */
+    border-radius: 50%;
+    margin: 10px;
+}
+  
+.teamCard {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    text-align-last: center;
+}
+    
+.teamContainer {
+    padding: 0 16px;
+}
+
+.teamName{
+    font-weight: bold;
+    color: #3356a6;
+}
+
+.teamTitle {
+    color: #1c9447;
+    font-weight: bold;
+}
+
+.teamMail{
+    font-style: italic;
+}
+
+@media screen and (max-width: 550px) {
+    .teamGrid{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+    }
+}
+
+@media screen and (min-width: 551px) and (max-width: 800px) {
+    .teamGrid{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 30px;
+    }
+}
+
+@media screen and (min-width: 801px) and (max-width: 1350px) {
+    .teamGrid{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 30px;
+    }
+}

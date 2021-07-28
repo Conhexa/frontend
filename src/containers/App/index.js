@@ -13,6 +13,7 @@ import Gallery from "../Gallery";
 
 import '../../assets/style/styleApp.css';
 import WorkCouncil from "../WorkCouncil";
+import Team from "../Team";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
         <Route path="/gestionnaire" component={Gestionnaire} exact />
         <Route path="/gallery" component={Gallery} exact />
         <Route path="/workcouncil" component={WorkCouncil} exact />
+        <Route path="/team" component={Team} exact />
       </Switch>
     </div>
   );

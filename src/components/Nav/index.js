@@ -32,7 +32,7 @@ const Nav = () => {
                       <Link to="/"className="dropbtn">Information</Link>
                         <div className="dropdownContent">
                           <Link to="/workcouncil" className="dropdownItem">Page CE</Link>
-                          <Link to="/" className="dropdownItem">FaQ</Link>
+                          <Link to="/faq" className="dropdownItem">FaQ</Link>
                           <Link to="/team" className="dropdownItem">L'équipe</Link>
                         </div>
                     </li>

@@ -84,6 +84,74 @@ const WorkCouncil = () => {
                                 <p className="priceItem">15€</p>
                             </div>
                         </div>
+
+                        <div className="item">
+                            <img src={charbon} alt="charbon" />
+                            <div className="itemDescription">
+                                <h2 className="itemTitle">Charbon</h2>
+                                <p>
+                                    Description:
+                                </p>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non rutrum diam.
+                                </p>
+                            </div>
+                            <div className="itemPrice">
+                                <p className="itemTitle">Prix:</p>
+                                <p className="priceItem">15€</p>
+                            </div>
+                        </div>
+
+                        <div className="item">
+                            <img src={charbon} alt="charbon" />
+                            <div className="itemDescription">
+                                <h2 className="itemTitle">Charbon</h2>
+                                <p>
+                                    Description:
+                                </p>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non rutrum diam.
+                                </p>
+                            </div>
+                            <div className="itemPrice">
+                                <p className="itemTitle">Prix:</p>
+                                <p className="priceItem">15€</p>
+                            </div>
+                        </div>
+
+                        <div className="item">
+                            <img src={charbon} alt="charbon" />
+                            <div className="itemDescription">
+                                <h2 className="itemTitle">Charbon</h2>
+                                <p>
+                                    Description:
+                                </p>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non rutrum diam.
+                                </p>
+                            </div>
+                            <div className="itemPrice">
+                                <p className="itemTitle">Prix:</p>
+                                <p className="priceItem">15€</p>
+                            </div>
+                        </div>
+
+                        <div className="item">
+                            <img src={charbon} alt="charbon" />
+                            <div className="itemDescription">
+                                <h2 className="itemTitle">Charbon</h2>
+                                <p>
+                                    Description:
+                                </p>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non rutrum diam.
+                                </p>
+                            </div>
+                            <div className="itemPrice">
+                                <p className="itemTitle">Prix:</p>
+                                <p className="priceItem">15€</p>
+                            </div>
+                        </div>
                         
                     </div>
                 </div>

@@ -6,8 +6,7 @@
 
 .teamCard img{
     width: 50%;
-    /* border-top-left-radius: 15px;
-    border-top-right-radius: 15px; */
+    height: auto;
     border-radius: 50%;
     margin: 10px;
 }
@@ -38,24 +37,18 @@
 
 @media screen and (max-width: 550px) {
     .teamGrid{
-        display: grid;
         grid-template-columns: repeat(1, 1fr);
-        grid-gap: 30px;
     }
 }
 
 @media screen and (min-width: 551px) and (max-width: 800px) {
     .teamGrid{
-        display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-gap: 30px;
     }
 }
 
 @media screen and (min-width: 801px) and (max-width: 1350px) {
     .teamGrid{
-        display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-gap: 30px;
     }
 }

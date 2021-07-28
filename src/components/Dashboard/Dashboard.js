@@ -152,7 +152,7 @@ export default function Dashboard() {
           >
             <MenuIcon />
           </IconButton>
-          <img src={Logo} alt="Logo"/>
+          <img className="logoDashboard" src={Logo} alt="Logo"/>
           <Typography component="h1" variant="h6" color="inherit" noWrap className={classes.title}>
             Dashboard Conhexa
           </Typography>

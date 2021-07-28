@@ -14,6 +14,7 @@ import Gallery from "../Gallery";
 import '../../assets/style/styleApp.css';
 import WorkCouncil from "../WorkCouncil";
 import Team from "../Team";
+import QuestionAnswer from "../QuestionAnswer";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
         <Route path="/gallery" component={Gallery} exact />
         <Route path="/workcouncil" component={WorkCouncil} exact />
         <Route path="/team" component={Team} exact />
+        <Route path="/faq" component={QuestionAnswer} exact />
       </Switch>
     </div>
   );

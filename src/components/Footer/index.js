@@ -21,8 +21,7 @@ const Footer = () => {
           </div>
           <div className="columnFooter">
             <p className="headingFooter">Service RH</p>
-            <Link to="/manager" className="footerLink">Fanny Adam</Link>
-            <Link to="/gestionnaire" className="footerLink">Margaux Tacquez</Link>
+            <Link to="/contact" className="footerLink">Contacter le service RH</Link>
           </div>
           <div className="columnFooter">
             <p className="headingFooter">Nos réseaux</p>

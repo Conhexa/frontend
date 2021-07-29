@@ -23,7 +23,7 @@ const Nav = () => {
                       <Link to="/">Conhexa Academy</Link>
                     </li>
                     <li>
-                      <Link to="/">Planning</Link>
+                      <Link to="/planning">Planning</Link>
                     </li>
                     <li>
                       <Link to="/blog">Blog</Link>

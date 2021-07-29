@@ -7,7 +7,7 @@ import Main from "../Main";
 import Dashboard from "../../components/Dashboard/Dashboard.js";
 import Contact from "../Contact";
 import Manager from "../Contact/Manager";
-/* import Planning from "../Planning"; */
+import Planning from "../Planning";
 import Gestionnaire from "../Contact/Gestionnaire";
 import Gallery from "../Gallery";
 
@@ -26,7 +26,7 @@ function App() {
         <Route path="/category/:id" component={Category} exact />
         <Route path="/admin" component={Dashboard} exact />
         <Route path="/contact" component={Contact} exact />
-        {/* <Route path="/planning" component={Planning} exact /> */}
+        <Route path="/planning" component={Planning} exact />
         <Route path="/manager" component={Manager} exact />
         <Route path="/gestionnaire" component={Gestionnaire} exact />
         <Route path="/gallery" component={Gallery} exact />

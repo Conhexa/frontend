@@ -2,15 +2,16 @@ import React from "react";
 import Card from "../../components/Card";
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
-import Grid from '@material-ui/core/Grid';
+
+import "../../assets/style/styleMain.css";
 
 const useStyles = makeStyles((theme) => ({
   root: {
     width: 300,
     height: 450,
     marginTop: 'auto',
-    marginRight: 'auto',
     marginLeft: 'auto',
+    marginRight: 'auto',
   },
   paper: {
     padding: theme.spacing(2),
@@ -28,25 +29,20 @@ const Articles = ({ articles }) => {
   const classes = useStyles();
   const gridArticles = articles.slice(articles.length-3, articles.length);
   return (
-    <div>
-      <div>
-        <div>
-        <Grid container spacing={1}>
+        <div className="content">
+          <div className="gridMainArticle">
           {gridArticles.reverse().map((article, i) => {
             return (
               <div className={classes.root}>
-                  <Grid item xs={10}>
-                    <Paper className={classes.paper}> 
-                      <Card article={article} key={`article__${article.slug}`} />
-                    </Paper>
-                  </Grid>
+                <Paper className={classes.paper}> 
+                  <Card article={article} key={`article__${article.slug}`} />
+                </Paper>
               </div>
             )
           })}
-        </Grid>
+          </div>
         </div>
-      </div>
-    </div>
+
   );
 };
 export default Articles;

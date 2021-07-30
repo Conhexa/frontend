@@ -6,9 +6,7 @@ import Category from "../Category";
 import Main from "../Main";
 import Dashboard from "../../components/Dashboard/Dashboard.js";
 import Contact from "../Contact";
-
 import Planning from "../Planning";
-
 import Gallery from "../Gallery";
 
 import '../../assets/style/styleApp.css';
@@ -31,7 +29,8 @@ function App() {
         <Route path="/workcouncil" component={WorkCouncil} exact />
         <Route path="/team" component={Team} exact />
         <Route path="/faq" component={QuestionAnswer} exact />
-      </Switch>
+      </Switch> 
+      
     </div>
   );
 }

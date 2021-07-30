@@ -32,6 +32,7 @@
     font-family: inherit;
     margin: 0;
   }
+  
   .dropdownContent {
     display: none;
     position: absolute;

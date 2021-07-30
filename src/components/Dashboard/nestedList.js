@@ -18,6 +18,7 @@ import EditIcon from '@material-ui/icons/Edit';
 import DeleteIcon from '@material-ui/icons/Delete';
 import SettingsIcon from '@material-ui/icons/Settings';
 import StorefrontIcon from '@material-ui/icons/Storefront';
+import EventIcon from '@material-ui/icons/Event';
 
 /* Import du style/img */
 import '../../assets/style/nestedList.css'
@@ -140,6 +141,12 @@ export default function NestedList() {
           </ListItem>
         </List>
       </Collapse>
+      <ListItem button className={classes.buttonDecoration}>
+        <ListItemIcon>
+          <EventIcon />
+        </ListItemIcon>
+        <ListItemText primary="Gérer le planning"/>
+      </ListItem>
       <ListItem button className={classes.buttonDecoration}>
         <ListItemIcon>
           <SettingsIcon />

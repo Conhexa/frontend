@@ -4,4 +4,47 @@
   text-align: center;
   font-size: 2em;
   margin: 10px 0px -5px 0px;
+  color: #1c9447
+}
+
+.gridMainArticle{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 30px;
+}
+
+.newEmployee{
+  background: #3356a6;
+}
+
+.newEmployee .content h1{
+  color: #f5f5f5;
+  font-size: 2em;
+}
+
+.newEmployee .content .teamGrid{
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.newEmployee .content .teamCard{
+  background: #f5f5f5;
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 550px) {
+  .newEmployee .content .teamGrid{
+      grid-template-columns: repeat(1, 1fr);
+  }
+  .gridMainArticle{
+    grid-template-columns: (repeat(1, 1fr));
+  }
+}
+
+@media screen and (min-width: 551px) and (max-width: 800px) {
+  .newEmployee .content .teamGrid{
+      grid-template-columns: repeat(2, 1fr);
+  }
+  .gridMainArticle{
+    grid-template-columns: repeat(2,1fr);
+  }
 }

@@ -14,6 +14,7 @@ import WorkCouncil from "../WorkCouncil";
 import Team from "../Team";
 import QuestionAnswer from "../QuestionAnswer";
 
+
 function App() {
   return (
     <div className="App">
@@ -30,7 +31,6 @@ function App() {
         <Route path="/team" component={Team} exact />
         <Route path="/faq" component={QuestionAnswer} exact />
       </Switch> 
-      
     </div>
   );
 }

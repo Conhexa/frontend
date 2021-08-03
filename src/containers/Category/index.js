@@ -3,14 +3,12 @@ import { useParams } from "react-router";
 import Articles from "../../components/Articles";
 import Query from "../../components/Query";
 import CATEGORY_ARTICLES_QUERY from "../../queries/category/articles";
-import Nav from "../../components/Nav";
 import Button from '@material-ui/core/Button';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 
 import { Link } from "react-router-dom";
 import CATEGORIES_QUERY from "../../queries/category/categories";
-import Footer from "../../components/Footer";
 
 
 const Category = () => {
@@ -27,7 +25,6 @@ const Category = () => {
   let { id } = useParams();
   return (
     <div>
-    <Nav />
     <Query query={CATEGORY_ARTICLES_QUERY} slug={id}>
       {({ data: { categories } }) => {
         if (categories.length) {
@@ -74,7 +71,6 @@ const Category = () => {
         }
       }}
     </Query>
-    <Footer />
     </div>
   );
 };

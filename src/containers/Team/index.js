@@ -1,6 +1,4 @@
 import React from "react";
-import Footer from "../../components/Footer";
-import Nav from "../../components/Nav";
 import "../../assets/style/styleTeam.css";
 
 import imgFanny from "../../assets/img/Fanny.jpg";
@@ -12,7 +10,6 @@ const Team = () =>{
 
     return(
         <div>
-            <Nav />
             <div className="content">
                 <h1>L'équipe Conhexa</h1>
                 <div className="teamGrid">
@@ -82,7 +79,6 @@ const Team = () =>{
                     </div>
                 </div>
             </div>
-            <Footer />
         </div>
     )
 }

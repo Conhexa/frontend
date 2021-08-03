@@ -1,6 +1,4 @@
 import React from "react";
-import Nav from "../../components/Nav";
-import Footer from "../../components/Footer";
 
 import "../../assets/style/styleWorkCouncil.css"
 
@@ -12,7 +10,6 @@ const WorkCouncil = () => {
     
     return(
         <div>
-            <Nav />
             <div className="content">
                 <h1>Notre comité d'entreprise</h1>
                 <div className="gridContent">
@@ -156,7 +153,6 @@ const WorkCouncil = () => {
                     </div>
                 </div>
             </div>
-            <Footer />
         </div>
     )
 }

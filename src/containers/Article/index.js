@@ -4,15 +4,12 @@ import Query from "../../components/Query";
 import ReactMarkdown from "react-markdown";
 import Moment from "react-moment";
 import ARTICLE_QUERY from "../../queries/article/article";
-import Nav from "../../components/Nav";
 import '../../assets/style/pageArticle.css';
-import Footer from "../../components/Footer";
 
 const Article = () => {
   let { id } = useParams();
   return (
     <div>
-    <Nav />
     <Query query={ARTICLE_QUERY} slug={id}>
       {({ data: { articles } }) => {
         if (articles.length) {
@@ -44,7 +41,6 @@ const Article = () => {
         }
       }}
     </Query>
-    <Footer />
     </div>
   );
 };

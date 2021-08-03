@@ -1,12 +1,7 @@
 import React from "react";
 import '../../assets/style/styleMain.css';
-/* import Query from "../../components/Query";
-import ARTICLES_QUERY from "../../queries/article/articles";
 
-import Articles from "../../components/Articles"; */
-import Nav from "../../components/Nav";
 import SlideShow from "../SlideShow/Slide";
-import Footer from "../../components/Footer"
 
 import Articles from "./articles.js";
 import Query from "../../components/Query";
@@ -21,7 +16,6 @@ const MainPage = () => {
 
     return (
         <div>
-            <Nav />
             <SlideShow />
             <div className="">
                 <h1 className="actualityTitle">Les actualités</h1>
@@ -67,7 +61,6 @@ const MainPage = () => {
                     </div>
                 </div>
             </div>
-            <Footer />
         </div>
     );
 }

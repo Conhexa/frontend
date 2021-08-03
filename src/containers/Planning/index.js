@@ -1,6 +1,4 @@
 import React from "react";
-import Footer from "../../components/Footer";
-import Nav from "../../components/Nav";
 
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
@@ -70,7 +68,6 @@ const Planning = () =>{
 
   return(
     <div>
-      <Nav />
       <div className={classes.root}>
         <AppBar position="static" className={classes.appBar}>
           <Tabs value={value} onChange={handleChange} aria-label="simple tabs example" className={classes.appBar}>
@@ -97,7 +94,6 @@ const Planning = () =>{
           </TabPanel>
         </div>
       </div>
-      <Footer />
     </div>
   )
 }

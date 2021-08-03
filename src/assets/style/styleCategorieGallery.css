@@ -1,0 +1,16 @@
+.categorieGallery{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+}
+
+.categorieGallery .imgGallery{
+    width: auto;
+    height: 200px;
+}
+
+.categorieGallery .nameGallery{
+    font-weight: bold;
+    color: fuchsia;
+}
+

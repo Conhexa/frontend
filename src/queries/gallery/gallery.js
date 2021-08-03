@@ -1,9 +1,14 @@
 import gql from "graphql-tag";
 const GALLERIES_QUERY = gql`
-  query Galleries {
-    galleries {
-      id
-      Name
+  query Galleries ($slug: String!){
+    galleries (where: {slug: $slug}) {
+      slug
+      name
+      photo {
+        id
+        name
+        url
+      }
     }
   }
 `;

@@ -6,77 +6,35 @@ import imgNico from "../../assets/img/nico.jpg";
 import imgThomas from "../../assets/img/thomas.jpg";
 import imgHildeLuc from "../../assets/img/hilde_luc.jpg";
 
+import Query from "../../components/Query";
+import TEAM_QUERY from "../../queries/team/teams.js";
+
 const Team = () =>{
 
     return(
         <div>
             <div className="content">
                 <h1>L'équipe Conhexa</h1>
-                <div className="teamGrid">
-                    <div className="teamCard">
-                        <img src={imgHildeLuc} alt="Hilde_Luc" />
-                        <div className="teamContainer">
-                            <h2 className="teamName">Hilde &amp; Luc </h2>
-                            <p className="teamTitle">Managing Directors</p>
-                            <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                            <p className="teamMail">h.dejonghe@conhexa.com</p>
-                            <p className="teamMail">l.vanholzaet@conhexa.com</p>
-                        </div>
-                    </div>
-                    <div className="teamCard">
-                        <img src={imgFanny} alt="Fanny" />
-                        <div className="teamContainer">
-                            <h2 className="teamName">Fanny Adam</h2>
-                            <p className="teamTitle">Talent Manager</p>
-                            <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                            <p className="teamMail">f.adam@conhexa.com</p>
-                        </div>
-                    </div>
-                    <div className="teamCard">
-                        <img src={imgNico} alt="Nico" />
-                        <div className="teamContainer">
-                            <h2 className="teamName">Nicolas Vangheluwe</h2>
-                            <p className="teamTitle">Plant Manager</p>
-                            <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                            <p className="teamMail">n.vangheluwe@conhexa.com</p>
-                        </div>
-                    </div>
-                    <div className="teamCard">
-                        <img src={imgThomas} alt="Thomas" />
-                        <div className="teamContainer">
-                            <h2 className="teamName">Thomas Van Herck</h2>
-                            <p className="teamTitle">Information Systems Manager</p>
-                            <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                            <p className="teamMail">t.vanherck@conhexa.com</p>
-                        </div>
-                    </div>
-                    <div className="teamCard">
-                        <img src={imgFanny} alt="Fanny" />
-                        <div className="teamContainer">
-                            <h2 className="teamName">Fanny Adam</h2>
-                            <p className="teamTitle">Talent Manager</p>
-                            <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                            <p className="teamMail">f.adam@conhexa.com</p>
-                        </div>
-                    </div>
-                    <div className="teamCard">
-                        <img src={imgNico} alt="Nico" />
-                        <div className="teamContainer">
-                            <h2 className="teamName">Nicolas Vangheluwe</h2>
-                            <p className="teamTitle">Plant Manager</p>
-                            <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                            <p className="teamMail">n.vangheluwe@conhexa.com</p>
-                        </div>
-                    </div>
-                    <div className="teamCard">
-                        <img src={imgThomas} alt="Thomas" />
-                        <div className="teamContainer">
-                            <h2 className="teamName">Thomas Van Herck</h2>
-                            <p className="teamTitle">Information Systems Manager</p>
-                            <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                            <p className="teamMail">t.vanherck@conhexa.com</p>
-                        </div>
-                    </div>
+                <div>
+                    <Query query={TEAM_QUERY} id={null}>
+                        {({ data: { teams } }) => {
+                            return (
+                                <div className="teamGrid">{teams.map((employee, i) => {
+                                    return (
+                                        <div className="teamCard">
+                                            <img src={"http://localhost:1337"+employee.picture.url} alt={employee.firstName + " " + employee.lastName} />
+                                            <div className="teamContainer">
+                                                <h2 className="teamName">{employee.firstName +" "+ employee.lastName}</h2>
+                                                <p className="teamTitle">{employee.job}</p>
+                                                <p>{employee.description}</p>
+                                                <p className="teamMail">{employee.mail}</p>
+                                            </div>
+                                        </div>
+                                    );
+                                    })}
+                                </div>
+                        )}}
+                    </Query>
                 </div>
             </div>
         </div>

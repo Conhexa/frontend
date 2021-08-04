@@ -9,6 +9,8 @@ const TEAM_QUERY = gql`
             picture{
                 url
             }
+            description
+            mail
         }
     }
 `;

@@ -9,6 +9,9 @@ import AccordionDetails from '@material-ui/core/AccordionDetails';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
+import Query from "../../components/Query";
+import MEMO_QUERY from "../../queries/memo/memo.js";
+
 const useStyles = makeStyles((theme) => ({
     root: {
       width: '100%',
@@ -99,56 +102,26 @@ const QuestionAnswer = () =>{
 
                 {/* Bloc permettant de gérer la grid des notes */}
                 <h2 className="faqTitle">Notes d'informations:</h2>
-                <div className="faqGridCard">
-                    <div className="faqCard">
-                        <div className="faqBox">
-                            <div className="faqContentCard">
-                                <h2>Conhexa</h2>
-                                <h3>Mutuelle</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, totam velit? Iure nemo labore inventore?</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="faqCard">
-                        <div className="faqBox">
-                            <div className="faqContentCard">
-                                <h2>Conhexa</h2>
-                                <h3>Compléments retraite</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, totam velit? Iure nemo labore inventore?</p>
-                                <a href="/">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="faqCard">
-                        <div className="faqBox">
-                            <div className="faqContentCard">
-                                <h2>Conhexa</h2>
-                                <h3>Compléments retraite</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, totam velit? Iure nemo labore inventore?</p>
-                                <a href="/">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="faqCard">
-                        <div className="faqBox">
-                            <div className="faqContentCard">
-                                <h2>Conhexa</h2>
-                                <h3>Compléments retraite</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, totam velit? Iure nemo labore inventore?</p>
-                                <a href="/">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="faqCard">
-                        <div className="faqBox">
-                            <div className="faqContentCard">
-                                <h2>Conhexa</h2>
-                                <h3>Compléments retraite</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, totam velit? Iure nemo labore inventore?</p>
-                                <a href="/">Read More</a>
-                            </div>
-                        </div>
-                    </div>
+                <div>
+                    <Query query={MEMO_QUERY} id={null}>
+                        {({ data: { memos } }) => {
+                            return (
+                                <div className="faqGridCard">{memos.map((memo, i) => {
+                                    return (
+                                        <div className="faqCard">
+                                            <div className="faqBox">
+                                                <div className="faqContentCard">
+                                                    <h2>Conhexa</h2>
+                                                    <h3>{memo.title}</h3>
+                                                    <p>{memo.content}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    );
+                                    })}
+                                </div>
+                        )}}
+                    </Query>
                 </div>
             </div>
         </div>

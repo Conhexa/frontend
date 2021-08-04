@@ -2,7 +2,6 @@ import React from "react";
 
 import "../../assets/style/styleWorkCouncil.css"
 
-import charbon from '../../assets/img/charbon.jpg';
 import Query from "../../components/Query";
 import SHOP_QUERY from "../../queries/shop/shop.js";
 
@@ -34,7 +33,7 @@ const WorkCouncil = () => {
                             <div className="listSell">{shops.map((article, i) => {
                                 return (
                                     <div className="item">
-                                        <img src={charbon} alt="charbon" />
+                                        <img src={"http://localhost:1337"+article.picture.url} alt={article.name} />
                                         <div className="itemDescription">
                                             <h2 className="itemTitle">{article.name}</h2>
                                             <p>

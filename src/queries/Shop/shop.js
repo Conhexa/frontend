@@ -8,6 +8,10 @@ query Shop{
             price
             quantity
             slug
+            picture {
+                url
+                name
+            }
     }
 }
 `;

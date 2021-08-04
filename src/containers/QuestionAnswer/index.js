@@ -12,6 +12,9 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Query from "../../components/Query";
 import MEMO_QUERY from "../../queries/memo/memo.js";
 import QUESTION_AND_ANSWER_QUERY from "../../queries/questionAndAnswer/qaa.js"
+import INFFORMATION_DOCUMENT_QUERY from "../../queries/informationDocument/informationDocument.js";
+
+import PictureAsPdfIcon from '@material-ui/icons/PictureAsPdf';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -67,6 +70,21 @@ const QuestionAnswer = () =>{
 
                 {/* Partie qui gère les documents utiles */}
                 <h2 className="faqTitle">Documents pratiques:</h2>
+
+                    <Query query={INFFORMATION_DOCUMENT_QUERY} id={null}>
+                        {({ data: { informationDocuments } }) => {
+                            return (
+                                <div>{informationDocuments.map((document, i) => {
+                                    return (
+                                        <div>
+                                            <a href={"http://localhost:1337"+document.file.url}><PictureAsPdfIcon /></a>
+                                            <p>{document.title}</p>
+                                        </div>
+                                    );
+                                    })}
+                                </div>
+                        )}}
+                    </Query>
 
                 {/* Bloc permettant de gérer la grid des notes */}
                 <h2 className="faqTitle">Notes d'informations:</h2>

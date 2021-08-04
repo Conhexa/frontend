@@ -26,7 +26,7 @@ const Nav = () => {
                       <Link to="/blog">Blog</Link>
                     </li>
                     <li className="dropdown">
-                      <Link to="/"className="dropbtn">Information</Link>
+                      <Link to="/faq"className="dropbtn">Information</Link>
                         <div className="dropdownContent">
                           <Link to="/workcouncil" className="dropdownItem">Page CE</Link>
                           <Link to="/faq" className="dropdownItem">FaQ</Link>

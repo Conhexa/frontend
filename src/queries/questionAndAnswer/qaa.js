@@ -6,9 +6,6 @@ const QUESTION_AND_ANSWER_QUERY = gql`
             question 
             answer 
             slug
-            category_qa_a{
-                page
-            }
     }
   }
 `;

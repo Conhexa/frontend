@@ -11,6 +11,7 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 import Query from "../../components/Query";
 import MEMO_QUERY from "../../queries/memo/memo.js";
+import QUESTION_AND_ANSWER_QUERY from "../../queries/questionAndAnswer/qaa.js"
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -38,63 +39,30 @@ const QuestionAnswer = () =>{
                 {/* Partie qui permet de gérer les différents accordion */}
                 <h2 className="faqTitle">Les questions les plus fréquentes: </h2>
                 <div className={classes.root}>
-                    <Accordion>
-                        <AccordionSummary
-                            expandIcon={<ExpandMoreIcon />}
-                            aria-controls="panel1a-content"
-                            id="panel1a-header"
-                            >
-                            <Typography className={classes.heading}>Accordion 1</Typography>
-                        </AccordionSummary>
-                        <AccordionDetails>
-                            <Typography>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-                                sit amet blandit leo lobortis eget.
-                            </Typography>
-                        </AccordionDetails>
-                    </Accordion>
-                    <Accordion>
-                        <AccordionSummary
-                            expandIcon={<ExpandMoreIcon />}
-                            aria-controls="panel1a-content"
-                            id="panel1a-header">
-                            <Typography className={classes.heading}>Accordion 2</Typography>
-                        </AccordionSummary>
-                        <AccordionDetails>
-                            <Typography>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-                                sit amet blandit leo lobortis eget.
-                            </Typography>
-                        </AccordionDetails>
-                    </Accordion>
-                    <Accordion>
-                        <AccordionSummary
-                            expandIcon={<ExpandMoreIcon />}
-                            aria-controls="panel1a-content"
-                            id="panel1a-header">
-                            <Typography className={classes.heading}>Accordion 3</Typography>
-                        </AccordionSummary>
-                        <AccordionDetails>
-                            <Typography>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-                                sit amet blandit leo lobortis eget.
-                            </Typography>
-                        </AccordionDetails>
-                    </Accordion>
-                    <Accordion>
-                        <AccordionSummary
-                            expandIcon={<ExpandMoreIcon />}
-                            aria-controls="panel1a-content"
-                            id="panel1a-header">
-                            <Typography className={classes.heading}>Accordion 4</Typography>
-                        </AccordionSummary>
-                        <AccordionDetails>
-                            <Typography>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-                                sit amet blandit leo lobortis eget.
-                            </Typography>
-                        </AccordionDetails>
-                    </Accordion>
+                    <Query query={QUESTION_AND_ANSWER_QUERY} id={null}>
+                        {({ data: { questionsAndAnswers } }) => {
+                            return (
+                                <div>{questionsAndAnswers.map((faq, i) => {
+                                    return (
+                                        <Accordion>
+                                            <AccordionSummary
+                                                expandIcon={<ExpandMoreIcon />}
+                                                aria-controls="panel1a-content"
+                                                id="panel1a-header"
+                                                >
+                                                <Typography className={classes.heading}>{faq.question}</Typography>
+                                            </AccordionSummary>
+                                            <AccordionDetails>
+                                                <Typography>
+                                                    {faq.answer}
+                                                </Typography>
+                                            </AccordionDetails>
+                                        </Accordion>
+                                    );
+                                    })}
+                                </div>
+                        )}}
+                    </Query>
                 </div>
 
                 {/* Partie qui gère les documents utiles */}
@@ -102,7 +70,6 @@ const QuestionAnswer = () =>{
 
                 {/* Bloc permettant de gérer la grid des notes */}
                 <h2 className="faqTitle">Notes d'informations:</h2>
-                <div>
                     <Query query={MEMO_QUERY} id={null}>
                         {({ data: { memos } }) => {
                             return (
@@ -122,7 +89,6 @@ const QuestionAnswer = () =>{
                                 </div>
                         )}}
                     </Query>
-                </div>
             </div>
         </div>
     )

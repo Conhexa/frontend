@@ -1,11 +1,5 @@
 import React from "react";
 import "../../assets/style/styleTeam.css";
-
-import imgFanny from "../../assets/img/Fanny.jpg";
-import imgNico from "../../assets/img/nico.jpg";
-import imgThomas from "../../assets/img/thomas.jpg";
-import imgHildeLuc from "../../assets/img/hilde_luc.jpg";
-
 import Query from "../../components/Query";
 import TEAM_QUERY from "../../queries/team/teams.js";
 

@@ -9,10 +9,10 @@ const Gallery = () => {
         <div>
             <div className="content">
             <Query query={GALLERY_QUERY} slug={id}>
-                {({ data: { gallery } }) => { 
+                {({ data: { galleries } }) => { 
                     return (
                         <div>
-                            <h1>{gallery[0].name}</h1>
+                            <h1>{galleries[0].name}</h1>
                         </div>
                     )
                 }}

@@ -11,15 +11,17 @@ const Gallery = ({ galleries }) => {
             <div className="categorieGallery">
                 {gridGallery.reverse().map((gallery, i) => {
                     return (
-                        <Link to={`/gallery/${gallery.slug}`} className="link">
-                            <img
-                                src={"http://localhost:1337"+gallery.photo[0].url}
-                                alt={"http://localhost:1337"+gallery.photo[0].url}
-                                height="100"
-                                className="imgGallery"
-                            />
-                            <h2 className="nameGallery">{gallery.name}</h2>
-                        </Link>
+                        <div className="fieldGallery">
+                            <Link to={`/gallery/${gallery.slug}`} className="link">
+                                <img
+                                    src={"http://localhost:1337"+gallery.photo[0].url}
+                                    alt={"http://localhost:1337"+gallery.photo[0].url}
+                                    height="100"
+                                    className="imgGallery"
+                                />
+                                <h2 className="nameGallery">{gallery.name}</h2>
+                            </Link>
+                        </div>
                     )
                 })}
             </div>

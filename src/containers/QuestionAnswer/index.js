@@ -106,7 +106,6 @@ const QuestionAnswer = () =>{
                                 <h2>Conhexa</h2>
                                 <h3>Mutuelle</h3>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, totam velit? Iure nemo labore inventore?</p>
-                                <a href="/">Read More</a>
                             </div>
                         </div>
                     </div>

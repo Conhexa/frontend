@@ -3,7 +3,8 @@ import React from "react";
 import "../../assets/style/styleWorkCouncil.css"
 
 import charbon from '../../assets/img/charbon.jpg';
-
+import Query from "../../components/Query";
+import SHOP_QUERY from "../../queries/shop/shop.js";
 
 
 const WorkCouncil = () => {
@@ -25,131 +26,34 @@ const WorkCouncil = () => {
                             <input type="checkbox" id="travel" name="voyage"/>
                             <label for="travel">Voyage</label>
                         </div>
-                        <p className="filterTitle">Prix:</p>
-                        <label>Min:</label>
-                        <input className="inputPrice"/>
-                        <label>Max:</label>
-                        <input className="inputPrice"/>
                     </div>
-                    <div className="listSell">
-                        <div className="item">
-                            <img src={charbon} alt="charbon" />
-                            <div className="itemDescription">
-                                <h2 className="itemTitle">Charbon</h2>
-                                <p>
-                                    Description:
-                                </p>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non rutrum diam.
-                                </p>
-                            </div>
-                            <div className="itemPrice">
-                                <p className="itemTitle">Prix:</p>
-                                <p className="priceItem">5€</p>
-                            </div>
-                        </div>
-                        <div className="item">
-                            <img src={charbon} alt="charbon" />
-                            <div className="itemDescription">
-                                <h2 className="itemTitle">Charbon</h2>
-                                <p>
-                                    Description:
-                                </p>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non rutrum diam.
-                                </p>
-                            </div>
-                            <div className="itemPrice">
-                                <p className="itemTitle">Prix:</p>
-                                <p className="priceItem">300€</p>
-                            </div>
-                        </div>
-                        
-                        <div className="item">
-                            <img src={charbon} alt="charbon" />
-                            <div className="itemDescription">
-                                <h2 className="itemTitle">Charbon</h2>
-                                <p>
-                                    Description:
-                                </p>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non rutrum diam.
-                                </p>
-                            </div>
-                            <div className="itemPrice">
-                                <p className="itemTitle">Prix:</p>
-                                <p className="priceItem">15€</p>
-                            </div>
-                        </div>
-
-                        <div className="item">
-                            <img src={charbon} alt="charbon" />
-                            <div className="itemDescription">
-                                <h2 className="itemTitle">Charbon</h2>
-                                <p>
-                                    Description:
-                                </p>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non rutrum diam.
-                                </p>
-                            </div>
-                            <div className="itemPrice">
-                                <p className="itemTitle">Prix:</p>
-                                <p className="priceItem">15€</p>
-                            </div>
-                        </div>
-
-                        <div className="item">
-                            <img src={charbon} alt="charbon" />
-                            <div className="itemDescription">
-                                <h2 className="itemTitle">Charbon</h2>
-                                <p>
-                                    Description:
-                                </p>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non rutrum diam.
-                                </p>
-                            </div>
-                            <div className="itemPrice">
-                                <p className="itemTitle">Prix:</p>
-                                <p className="priceItem">15€</p>
-                            </div>
-                        </div>
-
-                        <div className="item">
-                            <img src={charbon} alt="charbon" />
-                            <div className="itemDescription">
-                                <h2 className="itemTitle">Charbon</h2>
-                                <p>
-                                    Description:
-                                </p>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non rutrum diam.
-                                </p>
-                            </div>
-                            <div className="itemPrice">
-                                <p className="itemTitle">Prix:</p>
-                                <p className="priceItem">15€</p>
-                            </div>
-                        </div>
-
-                        <div className="item">
-                            <img src={charbon} alt="charbon" />
-                            <div className="itemDescription">
-                                <h2 className="itemTitle">Charbon</h2>
-                                <p>
-                                    Description:
-                                </p>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non rutrum diam.
-                                </p>
-                            </div>
-                            <div className="itemPrice">
-                                <p className="itemTitle">Prix:</p>
-                                <p className="priceItem">15€</p>
-                            </div>
-                        </div>
-                        
+                    <div>
+                        <Query query={SHOP_QUERY} id={null}>
+                        {({ data: { shops } }) => {
+                            return (
+                            <div className="listSell">{shops.map((article, i) => {
+                                return (
+                                    <div className="item">
+                                        <img src={charbon} alt="charbon" />
+                                        <div className="itemDescription">
+                                            <h2 className="itemTitle">{article.name}</h2>
+                                            <p>
+                                                Description:
+                                            </p>
+                                            <p>
+                                                {article.description}
+                                            </p>
+                                        </div>
+                                        <div className="itemPrice">
+                                            <p className="itemTitle">Prix:</p>
+                                            <p className="priceItem">{article.price+" €"}</p>
+                                        </div>
+                                        {console.log(article.description.length)}
+                                    </div>
+                                );
+                                })}
+                            </div>)}}
+                        </Query>
                     </div>
                 </div>
             </div>

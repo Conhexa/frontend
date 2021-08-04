@@ -1,5 +1,6 @@
 import gql from "graphql-tag";
 const SHOP_QUERY = gql`
+query Shop{
     shops{
             id
             name
@@ -8,5 +9,6 @@ const SHOP_QUERY = gql`
             quantity
             slug
     }
+}
 `;
 export default SHOP_QUERY;

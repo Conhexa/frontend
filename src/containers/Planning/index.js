@@ -12,7 +12,12 @@ import "../../assets/style/stylePlanning.css";
 import Zoom from "react-medium-image-zoom";
 import 'react-medium-image-zoom/dist/styles.css';
 
-import imgPlanningDF from "../../assets/img/Planning_DunFresh.PNG";
+import ReactMarkdown from "react-markdown";
+
+import Query from "../../components/Query";
+import PLANNING_DUNFRESH_QUERY from "../../queries/planning/dunfresh.js";
+import PLANNING_DUNFROST_QUERY from "../../queries/planning/dunfrost";
+import PLANNING_FRIGOA25_QUERY from "../../queries/planning/frigoa25";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -79,18 +84,79 @@ const Planning = () =>{
         <div className="content">
           <TabPanel value={value} index={0}>
             <h1>Planning de DunFresh</h1>
-            <Zoom>
-              <img
-                alt="that wanaka tree"
-                src={imgPlanningDF}
-              />
-            </Zoom>
+
+            <Query query={PLANNING_DUNFRESH_QUERY}> 
+              {({ data: { planningDunFreshes } }) => {
+                const planningDunfresh = planningDunFreshes.slice(planningDunFreshes.length-1, planningDunFreshes.length);
+                return (
+                  <div>
+                    {planningDunfresh.reverse().map((planning, i) => {
+                      return (
+                        <div>
+                          <ReactMarkdown>{planning.comment}</ReactMarkdown>
+                          <Zoom>
+                          <img
+                            src={"http://localhost:1337"+planning.picture.url}
+                            alt={planning.picture.name}
+                          />
+                          </Zoom>
+                        </div>
+                      )
+                    })}
+                  </div>
+                );
+              }}
+            </Query>
           </TabPanel>
           <TabPanel value={value} index={1}>
             <h1>Planning de Dunfrost</h1>
+            <Query query={PLANNING_DUNFROST_QUERY}> 
+              {({ data: { planningDunFrosts } }) => {
+                const planningDunFrost = planningDunFrosts.slice(planningDunFrosts.length-1, planningDunFrosts.length);
+                return (
+                  <div>
+                    {planningDunFrost.reverse().map((planning, i) => {
+                      return (
+                        <div>
+                          <ReactMarkdown>{planning.comment}</ReactMarkdown>
+                          <Zoom>
+                          <img
+                            src={"http://localhost:1337"+planning.picture.url}
+                            alt={planning.picture.name}
+                          />
+                          </Zoom>
+                        </div>
+                      )
+                    })}
+                  </div>
+                );
+              }}
+            </Query>
           </TabPanel>
           <TabPanel value={value} index={2}>
             <h1>Planning de Frigo A25</h1>
+            <Query query={PLANNING_FRIGOA25_QUERY}> 
+              {({ data: { planningFrigoA25s } }) => {
+                const planningFrigoA25 = planningFrigoA25s.slice(planningFrigoA25s.length-1, planningFrigoA25s.length);
+                return (
+                  <div>
+                    {planningFrigoA25.reverse().map((planning, i) => {
+                      return (
+                        <div>
+                          <ReactMarkdown>{planning.comment}</ReactMarkdown>
+                          <Zoom>
+                          <img
+                            src={"http://localhost:1337"+planning.picture.url}
+                            alt={planning.picture.name}
+                          />
+                          </Zoom>
+                        </div>
+                      )
+                    })}
+                  </div>
+                );
+              }}
+            </Query>
           </TabPanel>
         </div>
       </div>

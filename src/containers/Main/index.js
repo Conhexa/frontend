@@ -1,8 +1,6 @@
 import React from "react";
 import '../../assets/style/styleMain.css';
 
-import SlideShow from "../SlideShow/Slide";
-
 import Articles from "./articles.js";
 import Query from "../../components/Query";
 import ARTICLES_QUERY from "../../queries/article/articles";
@@ -11,12 +9,25 @@ import imgFanny from "../../assets/img/Fanny.jpg";
 import imgNico from "../../assets/img/nico.jpg";
 import imgHildeLuc from "../../assets/img/hilde_luc.jpg";
 
+import Banner from "../../assets/img/distribuer_et_transporter.jpg";
 
 const MainPage = () => {
 
     return (
         <div>
-            <SlideShow />
+            <section className="top-banner-section">
+                <div className="banner-image-div">
+                    <img className="banner-image" src={Banner} alt={Banner} />
+                </div>
+                <div className="banner-overlay-div"></div>
+                <div className="banner-text-div">
+                    <span className="banner-text">
+                    <p className="banner-h1-text">Bienvenue sur l'intranet Conhexa</p>
+                    <p className="banner-body-text">Vous retrouverez toute les informations concernant l'interne de l'entreprise</p>
+                    <p className="banner-btn"><a className="banner-btn-item" href="/faq">Plus d'information &#8594;</a></p>
+                    </span>
+                </div>
+            </section>
             <div className="">
                 <h1 className="actualityTitle">Les actualités</h1>
                     <Query query={ARTICLES_QUERY}> 

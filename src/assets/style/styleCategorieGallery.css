@@ -14,7 +14,7 @@
 
 .categorieGallery .nameGallery{
     font-weight: bold;
-    color: #4574e2;
+    color: #1c9477;
     font-size: 22px;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -24,4 +24,20 @@
     border: 2px solid #3356a6;
     border-radius: 20px;
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.fieldGallery:hover{
+    box-shadow: 0 5px 8px 0 #7497E8;
+}
+
+@media screen and (max-width: 620px) {
+    .categorieGallery{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+  
+@media screen and (min-width: 621px) and (max-width: 1300px) {
+    .categorieGallery{
+        grid-template-columns: repeat(2, 1fr);
+    }
 }

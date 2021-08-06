@@ -1,4 +1,37 @@
-.test{
+.photoGallery{
     width:300px;
-    height: auto;
+    height: 200px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
+
+.gridGallery{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 10px;
+}
+
+@media screen and (max-width: 550px) {
+    .gridGallery{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+  
+@media screen and (min-width: 551px) and (max-width: 1099px) {
+    .gridGallery{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 980px) and (max-width: 1300px) {
+    .gridGallery{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (min-width: 1301px) and (max-width: 1600px) {
+    .gridGallery{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+

@@ -19,8 +19,8 @@ const Gallery = () => {
                     {galleries.map(picture => {
                         /* console.log(picture.photo.length) */
                         const allPicture = picture.photo.slice(0, picture.photo.length);
-                        return (
-                            allPicture.map((photo, i) => {
+                        return (<div className="gridGallery">
+                            {allPicture.map((photo, i) => {
                                 /* console.log(photo.url) */
                                 return (
                                     <div>
@@ -28,12 +28,13 @@ const Gallery = () => {
                                         <img
                                             src={"http://localhost:1337"+photo.url}
                                             alt={photo.name}
-                                            className="test"
+                                            className="photoGallery"
                                         />
                                         </Zoom>
                                     </div>
                                 )
-                            })
+                            })}
+                            </div>
                         )
                     
                     })}

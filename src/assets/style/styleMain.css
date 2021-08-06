@@ -94,12 +94,17 @@
   padding-bottom: calc(0.5em + 0.08vw);
   padding-left: calc(0.5em + 0.08vw);
   padding-right: calc(0.5em + 0.08vw);
-  color: blue;
+  color: #E89B8B;
   background-color: white;
   text-align: center;
   text-transform: uppercase;
   font-weight: bold;
   border: 1px solid white;
+  border-radius: 20px;
+}
+
+.banner-btn-item:hover{
+  color:#B5E85D;
 }
 
 .banner-btn-item:link{
@@ -117,7 +122,7 @@
   text-align: center;
   font-size: 2em;
   margin: 10px 0px -5px 0px;
-  color: #1c9447;
+  color: #E89B8B;
 }
 
 .gridMainArticle{

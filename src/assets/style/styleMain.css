@@ -138,10 +138,12 @@
 .newEmployee .content h1{
   color: #f5f5f5;
   font-size: 2em;
+  padding-top: 20px;
 }
 
 .newEmployee .content .teamGrid{
   grid-template-columns: repeat(3, 1fr);
+  place-items: center;
 }
 
 .newEmployee .content .teamCard{

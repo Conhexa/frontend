@@ -70,13 +70,12 @@ const QuestionAnswer = () =>{
 
                 {/* Partie qui gère les documents utiles */}
                 <h2 className="faqTitle">Documents pratiques:</h2>
-
                     <Query query={INFFORMATION_DOCUMENT_QUERY} id={null}>
                         {({ data: { informationDocuments } }) => {
                             return (
-                                <div>{informationDocuments.map((document, i) => {
+                                <div className="practicalDoc">{informationDocuments.map((document, i) => {
                                     return (
-                                        <div>
+                                        <div className="downloadDoc">
                                             <a href={"http://localhost:1337"+document.file.url}><PictureAsPdfIcon /></a>
                                             <p>{document.title}</p>
                                         </div>
@@ -85,7 +84,6 @@ const QuestionAnswer = () =>{
                                 </div>
                         )}}
                     </Query>
-
                 {/* Bloc permettant de gérer la grid des notes */}
                 <h2 className="faqTitle">Notes d'informations:</h2>
                     <Query query={MEMO_QUERY} id={null}>

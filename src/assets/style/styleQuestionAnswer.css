@@ -4,9 +4,29 @@
     font-size: 20px;
 }
 
+.practicalDoc{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 10px;
+}
+
+.practicalDoc svg{
+    width: auto;
+    height: 50px;
+    color: #E80000;
+}
+
+.downloadDoc{
+    text-align: center;
+}
+
+.downloadDoc p{
+    font-weight: bold;
+}
+
 .faqGridCard{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
 }
 
 .faqCard {
@@ -77,17 +97,6 @@
     transition: 0.5s;
 }
 
-@media (min-width: 1800px) and (max-width: 2000px){
-    .faqGridCard{
-        grid-template-columns: repeat(4, 1fr);
-    }
-}
-
-@media (min-width: 1800px) and (max-width: 2000px){
-    .faqGridCard{
-        grid-template-columns: repeat(4, 1fr);
-    }
-}
 
 @media screen and (max-width: 550px) {
     .faqGridCard{
@@ -98,15 +107,23 @@
     .faqCard{
         margin: 0;
     }
+
+    .practicalDoc{
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
-@media screen and (min-width: 551px) and (max-width: 800px) {
+@media screen and (min-width: 551px) and (max-width: 1050px) {
     .faqGridCard{
         grid-template-columns: repeat(2, 1fr);
-        grid-gap: 0;
     }
+    .practicalDoc{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
 
-    .faqCard{
-        margin: 0;
+@media screen and (min-width: 1051px) and (max-width: 1650px) {
+    .faqGridCard{
+        grid-template-columns: repeat(3, 1fr);
     }
 }

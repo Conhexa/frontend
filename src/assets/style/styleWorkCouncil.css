@@ -115,11 +115,6 @@
     margin: -3px 0 5px 0;
 }
 
-.inputPrice{
-    width: 50px;
-    margin: 5px;
-}
-
 @media screen and (max-width: 550px) {
     .gridContent{
         grid-template-columns: repeat(1, 1fr);

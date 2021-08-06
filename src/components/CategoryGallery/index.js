@@ -7,7 +7,7 @@ import '../../assets/style/styleCategorieGallery.css';
 const Gallery = ({ galleries }) => {
   const gridGallery = galleries.slice(0, galleries.length);
   return (
-        <div className="content">
+        <div>
             <div className="categorieGallery">
                 {gridGallery.reverse().map((gallery, i) => {
                     return (

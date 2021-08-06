@@ -5,6 +5,7 @@ const ARTICLES_QUERY = gql`
       slug
       title
       description
+      created_at
       category {
         slug
         name

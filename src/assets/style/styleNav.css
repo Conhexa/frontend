@@ -9,7 +9,7 @@
 }
 
 .menuNav li a:hover{
-    color: #E89B8B;
+    color: #E88BB1;
 }
 
 .menuNav li a:focus{
@@ -22,7 +22,7 @@
   }
 
   .menuNav li a:active{
-      color:#E89B8B;
+      color:#E88BB1;
   }
   
   .dropdown .dropbtn {

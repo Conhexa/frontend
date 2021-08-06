@@ -23,7 +23,7 @@ const Card = ({ article }) => {
             className="articleImg"
           />
         </div>
-        <p id="category" >
+        <p id="category">
           {article.category.name}
         </p>
         <p id="author">

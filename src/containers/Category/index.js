@@ -20,8 +20,8 @@ const Category = () => {
         if (categories.length) {
           return (
             <div>
-              <div className="uk-section">
-                <div className="uk-container uk-container-large">
+              <div>
+                <div className="content">
                   <h1>{categories[0].name}</h1>
                   <div className="menuCategory">
                   <Query query={CATEGORIES_QUERY} id={null}>

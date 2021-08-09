@@ -17,6 +17,7 @@ import WorkCouncil from "../WorkCouncil";
 import Team from "../Team";
 import QuestionAnswer from "../QuestionAnswer";
 import Gallery from "../Gallery";
+import Academy from "../Academy";
 
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
         <Route path="/workcouncil" component={WorkCouncil} exact />
         <Route path="/team" component={Team} exact />
         <Route path="/faq" component={QuestionAnswer} exact />
+        <Route path="/academy" component={Academy} exact />
       </Switch>
       <Footer />
     </div>

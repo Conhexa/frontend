@@ -7,9 +7,9 @@
 
 .categorieGallery .imgGallery{
     width: auto;
-    height: 260px;
     border-top-left-radius: 17px;
     border-top-right-radius: 17px;
+    max-height: 230px;
 }
 
 .categorieGallery .nameGallery{
@@ -24,6 +24,7 @@
     border: 2px solid #3356a6;
     border-radius: 20px;
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 345px;
 }
 
 .fieldGallery:hover{

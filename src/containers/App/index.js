@@ -18,6 +18,8 @@ import Team from "../Team";
 import QuestionAnswer from "../QuestionAnswer";
 import Gallery from "../Gallery";
 import Academy from "../Academy";
+import AcademyCategory from "../AcademyCategory";
+import Academies from "../Academies";
 
 
 function App() {
@@ -36,7 +38,9 @@ function App() {
         <Route path="/workcouncil" component={WorkCouncil} exact />
         <Route path="/team" component={Team} exact />
         <Route path="/faq" component={QuestionAnswer} exact />
-        <Route path="/academy" component={Academy} exact />
+        <Route path="/academy" component={Academies} exact />
+        <Route path="/academy/:id" component={Academy} exact />
+        <Route path="/category-academy/:id" component={AcademyCategory} exact />
       </Switch>
       <Footer />
     </div>

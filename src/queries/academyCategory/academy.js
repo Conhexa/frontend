@@ -1,7 +1,7 @@
 import gql from "graphql-tag";
 const CATEGORY_ACADEMIES_QUERY = gql`
-    query CategoryAcademy{
-        academyCategories{
+    query CategoryAcademy ($slug: String!){
+        academyCategories (where: {slug: $slug}){
             name
             slug
             academies{
@@ -11,6 +11,9 @@ const CATEGORY_ACADEMIES_QUERY = gql`
                 slug
                 image{
                     url
+                    name
+                }
+                academy_category{
                     name
                 }
             }

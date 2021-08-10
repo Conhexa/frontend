@@ -22,7 +22,6 @@ const Academy = ({ academies }) => {
                                 />
                                 <h2 className="titleAcademy">{academy.title}</h2>
                                 <p className="descriptionAcademy">{academy.description}</p>
-                                <p>{academy.description.length}</p>
                             </Link>
                         </div>
                     )

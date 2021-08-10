@@ -52,8 +52,8 @@ const AcademyCategory = () => {
                                 )}}
                             </Query>
                             </div>
-{/*                             <Academy academies={academyCategories.academies} />
- */}                            </div>
+                             <Academy academies={academyCategories[0].academies} />
+                           </div>
                         </div>
                         </div>  
                     );

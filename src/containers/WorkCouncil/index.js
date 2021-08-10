@@ -12,20 +12,7 @@ const WorkCouncil = () => {
         <div>
             <div className="content">
                 <h1>Notre comité d'entreprise</h1>
-                <div className="gridContent">
-                    <div className="filterMenu">
-                        <p className="filterTitle">Rechercher:</p>
-                        <input class="search__input" type="text" placeholder="Search" />
-                        <p className="filterTitle">Catégorie:</p>
-                        <div className="filterCheckbox">
-                            <input type="checkbox" id="product" name="produit"/>
-                            <label for="produit">Produit</label>
-                            <input type="checkbox" id="hobby" name="loisir"/>
-                            <label for="hobby">Loisir</label>
-                            <input type="checkbox" id="travel" name="voyage"/>
-                            <label for="travel">Voyage</label>
-                        </div>
-                    </div>
+                <div>
                     <div>
                         <Query query={SHOP_QUERY} id={null}>
                         {({ data: { shops } }) => {

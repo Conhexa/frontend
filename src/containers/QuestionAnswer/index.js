@@ -16,6 +16,10 @@ import INFFORMATION_DOCUMENT_QUERY from "../../queries/informationDocument/infor
 
 import PictureAsPdfIcon from '@material-ui/icons/PictureAsPdf';
 
+import imgLogo from '../../assets/img/logo.png';
+
+import ReactMarkdown from 'react-markdown';
+
 const useStyles = makeStyles((theme) => ({
     root: {
       width: '100%',
@@ -94,9 +98,9 @@ const QuestionAnswer = () =>{
                                         <div className="faqCard">
                                             <div className="faqBox">
                                                 <div className="faqContentCard">
-                                                    <h2>Conhexa</h2>
+                                                    <img src={imgLogo} alt={imgLogo} className="logoMemo"/>
                                                     <h3>{memo.title}</h3>
-                                                    <p>{memo.content}</p>
+                                                    <ReactMarkdown>{memo.content}</ReactMarkdown>
                                                 </div>
                                             </div>
                                         </div>

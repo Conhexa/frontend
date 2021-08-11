@@ -11,16 +11,14 @@
     grid-template-columns: repeat(3, 1fr);
 }
 
-.filterMenu{
-    border: 2px solid black;
-    border-radius: 20px;
-    padding: 10px;
-    margin: auto;
+.shop p{
+    text-align: center;
 }
 
-.filterTitle{
+.shop h3{
+    color: #3356A6;
     font-weight: bold;
-    text-decoration: underline;
+    font-size: 1.2rem;
 }
 
 .item{
@@ -58,6 +56,7 @@
     margin-top: -15px;
     font-size: 14px;
     padding: 2px;
+    text-align: left;
 }
 
 .itemPrice{
@@ -69,50 +68,95 @@
     text-align-last: center;
 }
 
-.search__input {
-    width: 90%;
-    padding: 8px 8px;
-
-    background-color: transparent;
-    transition: transform 250ms ease-in-out;
-    font-size: 14px;
-    line-height: 18px;
-    color: #575756;
-    background-color: transparent;
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z'/%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-size: 18px 18px;
-    background-position: 95% center;
-    border-radius: 50px;
-    border: 1px solid #575756;
-    transition: all 250ms ease-in-out;
-    backface-visibility: hidden;
-    transform-style: preserve-3d;
+.ceInformation h3{
+    color: #3356A6;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-top: 20px;
 }
 
-.search__input::placeholder {
-    color: rgba(87, 87, 86, 0.8);
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-}
-
-.search__input:hover,
-.search__input:focus {
-    padding: 12px 0;
-    outline: 0;
-    border: 1px solid transparent;
-    border-bottom: 1px solid #575756;
-    border-radius: 0;
-    background-position: 100% center;
-}
-
-.filterCheckbox{
+.ceGridCard{
     display: grid;
-    grid-template-columns: 0.2fr 1.5fr;
+    grid-template-columns: repeat(4, 1fr);
+    
 }
 
-.filterCheckbox label{
-    margin: -3px 0 5px 0;
+.ceCard {
+    position: relative;
+    min-width: 320px;
+    height: 440px;
+    border-radius: 15px;
+    margin: 30px;
+    transition: 0.5s;
+}
+
+.logoMemo{
+    width: 90px;
+}
+
+.ceCard .ceBox {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    /* background: #d8d6d6; */
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: 0.5s;
+    box-shadow: 0 4px 5px 0 rgb(0 2 25 / 30%);
+  }
+  
+.ceCard .ceBox:hover {
+    transform: translateY(-50px);
+}
+  
+.ceCard .ceBox:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: rgba(51, 86, 166, 0.05);
+}
+  
+.ceCard .ceBox .ceContentCard {
+    padding: 20px;
+    text-align: center;
+}
+  
+/* .ceCard .ceBox .ceContentCard h2 {
+    position: absolute;
+    top: -10px;
+    right: 30px;
+    font-size: 4rem;
+    color: rgba(255, 255, 255, 0.1);
+} */
+  
+.ceCard .ceBox .ceContentCard h3 {
+    font-size: 1.2rem;
+    color: #593E3E;
+    z-index: 1;
+    transition: 0.5s;
+    margin-bottom: 15px;
+    margin-top: 0px;
+    font-weight: bold;
+}
+  
+.ceCard .ceBox .ceContentCard p {
+    font-size: 1rem;
+    font-weight: 300;
+    color: black;
+    z-index: 1;
+    transition: 0.5s;
+}
+
+.ceCard .ceBox .ceContentCard a{
+    font-weight: bold;
 }
 
 @media screen and (max-width: 550px) {

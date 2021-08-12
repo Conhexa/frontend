@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import '../../assets/style/styleNav.css'
+import LoginButton from "../Login";
+import LogoutButton from "../Logout";
 
 const Nav = () => {
   return (
@@ -38,6 +40,10 @@ const Nav = () => {
                     </li>
                     <li>
                       <Link to="/contact">Contact</Link>
+                    </li>
+                    <li>
+                      <LoginButton/>
+                      <LogoutButton/>
                     </li>
                   </ul>
                 </div>

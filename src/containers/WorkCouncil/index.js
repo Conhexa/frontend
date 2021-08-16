@@ -3,8 +3,8 @@ import React from "react";
 import "../../assets/style/styleWorkCouncil.css"
 
 import Query from "../../components/Query";
-import SHOP_QUERY from "../queries/shop/shop.js";
-import INFORMATION_CE_QUERY from "../queries/shop/information.js";
+import SHOP_QUERY from "../../queries/shop/shop.js";
+import INFORMATION_CE_QUERY from "../../queries/shop/information.js";
 import ReactMarkdown from "react-markdown";
 
 import imgLogo from '../../assets/img/logo.png';

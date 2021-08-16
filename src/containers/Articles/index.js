@@ -18,7 +18,6 @@ const Home = () => {
           <div className="content">
             <h1>Blog</h1>
             <div className="menuCategory">
-              
                 <Query query={CATEGORIES_QUERY} id={null}>
                 {({ data: { categories } }) => {
                   return (

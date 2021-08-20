@@ -3,7 +3,6 @@ import GALLERY_QUERY from "../../queries/gallery/gallery.js";
 import Query from "../../components/Query";
 import { useParams } from "react-router";
 import Zoom from 'react-medium-image-zoom';
-
 import '../../assets/style/styleGallery.css';
 
 const Gallery = () => {

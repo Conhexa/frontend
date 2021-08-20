@@ -27,7 +27,8 @@ const Team = () =>{
                                     );
                                     })}
                                 </div>
-                        )}}
+                            )
+                        }}
                     </Query>
                 </div>
             </div>

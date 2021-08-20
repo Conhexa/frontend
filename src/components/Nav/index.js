@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import '../../assets/style/styleNav.css'
+import '../../assets/style/styleNav.css';
 import LoginButton from "../Login";
 import LogoutButton from "../Logout";
 

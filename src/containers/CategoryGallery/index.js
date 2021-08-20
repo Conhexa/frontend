@@ -1,6 +1,4 @@
 import React from "react";
-
-
 import CategorieGallery from "../../components/CategoryGallery";
 import Query from "../../components/Query";
 import CATEGORIES_GALLERY_QUERY from "../../queries/gallery/categorie.js";

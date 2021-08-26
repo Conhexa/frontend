@@ -26,6 +26,7 @@ const AcademyCategory = () => {
                                 <img
                                     src={LogoAcademy}
                                     alt="logo Conhexa Academy"
+                                    className="academyLogo"
                                 />
                             </div>
                             <h1>{academyCategories[0].name}</h1>

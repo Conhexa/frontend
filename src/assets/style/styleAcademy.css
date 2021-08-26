@@ -1,12 +1,17 @@
 .logoAcademy{
     text-align-last: center;
-    margin-top: 20px;
+    margin-top: 10px;
+}
+
+.logoAcademy img{
+    max-width: 25%;
 }
 
 .gridAcademy{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 30px;
+    justify-items: center;
 }
 
 .cardAcademy{
@@ -27,6 +32,7 @@
     margin-top: -23px;
     margin-bottom: 20px;
 }
+
 
 .imgAcademy{
     border-radius: 10px;
